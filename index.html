@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening Challenge Botim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 15px;
+            background: linear-gradient(135deg, #0088cc, #00cc88);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            color: #0088cc;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .challenge-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Challenge Bot</h1>
+            <p>Do'stlaringiz bilan challenge qiling!</p>
+        </div>
+        
+        <button class="btn" onclick="createChallenge()">➕ Yangi Challenge</button>
+        <button class="btn" onclick="showChallenges()">📋 Mening Challengelarim</button>
+        <button class="btn" onclick="showFriends()">👥 Do'stlarim</button>
+        
+        <div id="content">
+            <!-- Bu joyda content ko'rinadi -->
+        </div>
+    </div>
+
+    <script>
+        function createChallenge() {
+            document.getElementById('content').innerHTML = `
+                <div class="challenge-card">
+                    <h3>Yangi Challenge Yaratish</h3>
+                    <p>Tez orada...</p>
+                </div>
+            `;
+        }
+        
+        function showChallenges() {
+            document.getElementById('content').innerHTML = `
+                <div class="challenge-card">
+                    <h3>Mening Challengelarim</h3>
+                    <p>Hozircha challengelar yo'q</p>
+                </div>
+            `;
+        }
+        
+        function showFriends() {
+            document.getElementById('content').innerHTML = `
+                <div class="challenge-card">
+                    <h3>Do'stlarim</h3>
+                    <p>Do'stlaringizni qo'shing</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
